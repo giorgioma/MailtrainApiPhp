@@ -1,6 +1,14 @@
-# Mailtrain API PHP Library
+Mailtrain API PHP Library
+=========================
 
-Usage:
+This is a beta version
+
+# Installation
+```
+composer require giorgioma/mailtrainapiphp
+```
+
+# Usage
 
 ```
 <?php
