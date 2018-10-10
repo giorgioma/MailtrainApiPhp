@@ -1,0 +1,14 @@
+{
+    "name": "giorgioma/mailtrainapiphp",
+    "description": "A simple PHP wrapper to call Mailtrain APIs",
+    "type": "library",
+    "license": "MIT License",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "GiorgioMa\\MailtrainApiPhp\\": "./src/"
+        }
+    }
+}
