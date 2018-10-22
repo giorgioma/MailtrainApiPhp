@@ -71,9 +71,8 @@ class NewsletterApi {
 
 		$url = $this->host . $url .'?access_token=' . $this->token;
 		$response = $this->client->request($type, $url, $params);
-		$body = $response->getBody();
-
-		return $body;
+		
+		return $response;
 
 	}
 
