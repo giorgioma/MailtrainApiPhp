@@ -7,15 +7,6 @@ This is a beta version
 ```
 composer require giorgioma/mailtrainapiphp
 ```
-# Return values
-Each function performs a [Guzzle](http://docs.guzzlephp.org/en/stable/) request and returns the whole response object, so in your code you will have access to the full response
-```
-echo $res->getStatusCode();
-// "200"
-echo $res->getHeader('content-type');
-// 'application/json; charset=utf8'
-echo $res->getBody();
-```
 
 # Usage
 
@@ -55,7 +46,18 @@ $client->getLists($subscribeEmail);
 $client->delete($listCode, $unsubscribe);
 ```
 
-The only functions tested and working are the ones I am using in the example above, however all API entries described in the [Mailtrain documentation](https://github.com/Mailtrain-org/mailtrain/wiki/Using-API) are covered in the code and should work.
+The only functions tested are the ones I am using in the examples above, however all API entries described in the [Mailtrain documentation](https://github.com/Mailtrain-org/mailtrain/wiki/Using-API) are covered in the code and should work.
+
+# Return values
+Each function performs a [Guzzle](http://docs.guzzlephp.org/en/stable/) request and returns the whole response object, so in your code you will have access to the full response
+```
+$res = $client->getList($listID);
+echo $res->getStatusCode();
+// "200"
+echo $res->getHeader('content-type');
+// 'application/json; charset=utf8'
+echo $res->getBody();
+```
 
 For more the details have a look in the code.
 
